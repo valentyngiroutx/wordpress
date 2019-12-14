@@ -1,0 +1,159 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #333;
+	font-family: 'Dosis', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	font-size: 2.5rem;
+	display: flex;
+	background-color: #0d7619;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header ul li {
+	list-style-type: none;
+	
+	color: white;
+}
+
+.header ul {
+	display: flex;
+}
+
+.header a {
+	color: white;
+	text-decoration: none;
+	margin: 0 1rem;
+	padding-right: 1rem;
+}
+
+.header a:hover {
+	color: #59F86B;
+}
+
+.section-1 {
+	min-height: 40rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.section-title {
+	color: #615858;
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+.marron-title {
+	color: #615858;
+	font-size: 3.5rem;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.green-title {
+	color: #9acf64;
+	font-size: 3.5rem;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.buton a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.8rem;
+	background-color: #395e1b;
+	padding: 1.5rem;
+	border-radius: 5rem;	
+}
+
+.buton {
+	padding-bottom: 6rem;
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.buton a:hover {
+	color: #59F86B
+}
+
+.section-2 {
+	color: #615858;
+}
+
+.section-title2 {
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	text-align: center; 
+	content: ""; 
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    padding-top: 6rem;
+	position: relative;
+}
+
+p.section-title2:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+	right: 30%;
+	height: 0.1rem;
+	background-color: #333;
+}
+
+.paragraphe {
+	font-size: 2rem;
+	text-align: center;
+	padding: 3rem 40rem;
+	justify-content: center;
+	line-height: 3rem;
+	padding-bottom: 6rem;
+}
+
+.bandeau-img {
+	overflow: hidden;
+	max-height: 20rem;
+}
+
+.bandeau {
+	width: 100%;
+	height: 100%;
+}
+
+.program-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2rem;
+	grid-template-areas: "gauche droite";
+}
+
+.gauche {
+	font-size: 2rem;
+	grid-area: "gauche";
+}
+
+.droite {
+	font-size: 2rem;
+	grid-area: "droite";
+}
+
+.flex {
+	display: flex;
+}
