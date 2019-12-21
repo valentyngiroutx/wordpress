@@ -78,8 +78,9 @@ p {
 	color: white;
 	font-size: 1.8rem;
 	background-color: #395e1b;
-	padding: 1.5rem;
-	border-radius: 5rem;	
+	padding: 1rem 1.5rem;
+	border-radius: 5rem;
+	align-items: center;	
 }
 
 .buton {
@@ -96,26 +97,24 @@ p {
 	color: #615858;
 }
 
-.section-title2 {
-	font-size: 3.5rem;
+.titre-section {
 	text-transform: uppercase;
-	text-align: center; 
-	content: ""; 
-    display: block;
-    margin: 0 auto;
-    width: 30%;
-    padding-top: 6rem;
+	color: #615858;
+	font-size: 4rem;
+	font-weight: 500;
+	text-align: center;
+	margin: 4% auto;
 	position: relative;
 }
 
-p.section-title2:before {
-	content: '';
+.titre-section::before {
+	content: "";
 	position: absolute;
-	bottom: 0;
-	left: 30%;
-	right: 30%;
+	top: 180%;
+	left: 45%;
+	right: 45%;
 	height: 0.1rem;
-	background-color: #333;
+	background-color: #615858;
 }
 
 .paragraphe {
@@ -137,11 +136,16 @@ p.section-title2:before {
 	height: 100%;
 }
 
+.secttion-3 {
+	background-color: #fffdf1;
+}
+
 .program-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 2rem;
 	grid-template-areas: "gauche droite";
+	margin-top: 8%;
 }
 
 .gauche {
@@ -154,6 +158,244 @@ p.section-title2:before {
 	grid-area: "droite";
 }
 
-.flex {
+.flex, .flex1 {
 	display: flex;
+	color: #615858;
+	margin: 0 auto;
+}
+
+.titles {
+	color: #0d7619;
+	font-size: 3rem;
+	margin: 5% 20%;
+	max-width: 40rem;
+	text-align: center;
+}
+
+.flex {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	grid-gap: 1rem;
+	grid-template-areas: "gauche-1 gauche-2";
+	margin: 5% 20%;
+}
+
+.horaire-text1 {
+	grid-area: "gauche-1";
+}
+
+.description-text1 {
+	grid-area: "gauche-2";
+}
+
+.flex1 {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	grid-gap: 1rem;
+	grid-template-areas: "droite-1 droite-2";
+	margin: 5% 20%;
+}
+
+.horaire-text2 {
+	grid-area: "droite-1";
+}
+
+.description-text2 {
+	grid-area: "droite-2";
+}
+
+.img-orateur{
+	width: 10rem;
+	border-radius: 50%;
+}
+
+.section-4-utitle {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 5%;
+}
+
+.buton-orateur a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.8rem;
+	background-color: #395e1b;
+	padding: 0.5rem 1rem;
+	border-radius: 5rem;
+	align-items: center;	
+}
+
+.buton-orateur {
+	padding-bottom: 6rem;
+	margin-top: 3rem;
+}
+
+.buton-orateur a:hover {
+	color: #59F86B
+}
+
+.champs-repeteur-orateur {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap; 
+	justify-content: center;
+}
+
+.each-orateur {
+	margin: 0 2rem;
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 3rem;
+}
+
+.nom-orateur {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #395e1b;
+}
+
+.text-orateur {
+	font-size: 1.5rem;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.infos-pratiques-vert {
+	background-color: #9acf64;
+	margin-left: 10%;
+	margin-right: 60%;
+	align-items: center;
+	height: 100%;
+	padding: 10% 5%;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-areas: 
+	"map text"
+	"time text"
+	"dinner text";
+	grid-row-gap: 5rem;
+}
+
+.text-infos {
+	color: white;
+	font-size: 3.5rem;
+	width: 80%;
+	margin-left: 10%;
+	position: relative;
+	grid-area: "text";
+	text-align: left;
+}
+
+.text-infos::before {
+	content: "";
+	position: absolute;
+	top: 112%;
+	left: 5%;
+	right: 5%;
+	height: 0.1rem;
+	background-color: #ffffff;
+}
+
+.img-map {
+	grid-area: map;
+}
+
+.img-time {
+	grid-area: time;
+}
+
+.img-dinner {
+	grid-area: dinner;
+}
+
+.imgvideos1, .imgvideos2 {
+	width: 50rem;
+	padding: 0 5%;
+}
+
+.interieurgridvideos {
+	display: flex;
+	justify-content: center;
+}
+
+.titre-videos {
+	font-size: 4rem;
+	font-weight: bold;
+	text-align: center;
+	bottom: 0.5%;
+}
+
+.text-videos {
+	font-size: 3rem;
+	text-align: center;
+}
+
+.imgvideos3 {
+	width: 30rem;
+}
+
+.videos-grille2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 2rem;
+	grid-template-areas: 
+	"img1 img2"
+	"img3 img4";
+	position: relative;
+	padding: 0 25rem;
+	margin: 5% auto;
+}
+
+.img1 {
+	grid-area: img1;
+	display: flex;
+}
+
+.img2 {
+	grid-area: img2;
+	display: flex;
+}
+
+.img3 {
+	grid-area: img3;
+	display: flex;
+}
+
+.img4 {
+	grid-area: img4;
+	display: flex;
+}
+
+.titre-video-bas {
+	font-size: 2rem;
+	font-weight: bold;
+	margin: 0 8%;
+	width: 20rem;
+}
+
+.resume-video-bas {
+	font-size: 1.5rem;
+}
+
+.footer {
+	display: flex;
+	background-color: #333;
+	padding: 3rem 0;
+}
+
+.footer a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.5rem;
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+.page404 {
+	font-size: 4rem;
+	text-align: center;
+	font-family: sans-serif;
 }
