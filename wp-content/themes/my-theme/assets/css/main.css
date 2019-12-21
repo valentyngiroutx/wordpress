@@ -310,26 +310,44 @@ p {
 	grid-area: dinner;
 }
 
+.imgvid1 {
+	margin: 5% auto;
+}
+
 .imgvideos1, .imgvideos2 {
 	width: 50rem;
-	padding: 0 5%;
+	position: relative;
 }
 
 .interieurgridvideos {
 	display: flex;
 	justify-content: center;
+	text-align: center;
+}
+
+.video1 {
+	position: relative;
+}
+
+.video2 {
+	position: relative;
 }
 
 .titre-videos {
 	font-size: 4rem;
 	font-weight: bold;
-	text-align: center;
-	bottom: 0.5%;
+	position: absolute;
+	color: white;
+	bottom: 40%;
+	width: 100%;
 }
 
 .text-videos {
-	font-size: 3rem;
-	text-align: center;
+	font-size: 2.8rem;
+	position: absolute;
+	bottom: 25%;
+	color: white;
+	width: 100%;
 }
 
 .imgvideos3 {
@@ -345,39 +363,81 @@ p {
 	"img1 img2"
 	"img3 img4";
 	position: relative;
+	justify-content: center;
 	padding: 0 25rem;
-	margin: 5% auto;
+	margin: 5%;
 }
 
 .img1 {
 	grid-area: img1;
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 1.5rem;
+	grid-template-areas: 
+	"image titre"
+	"image sous-texte";
+}
+
+.img1 img {
+	grid-area: image;
 }
 
 .img2 {
 	grid-area: img2;
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 1.5rem;
+	grid-template-areas: 
+	"image titre"
+	"image sous-texte";
+}
+
+.img2 img {
+	grid-area: image;
 }
 
 .img3 {
 	grid-area: img3;
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 1.5rem;
+	grid-template-areas: 
+	"image titre"
+	"image sous-texte";
+}
+
+.img3 img {
+	grid-area: image;
 }
 
 .img4 {
 	grid-area: img4;
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 1.5rem;
+	grid-template-areas: 
+	"image titre"
+	"image sous-texte";
+}
+
+.img4 img {
+	grid-area: image;
 }
 
 .titre-video-bas {
 	font-size: 2rem;
 	font-weight: bold;
-	margin: 0 8%;
 	width: 20rem;
+	grid-area: titre;
 }
 
 .resume-video-bas {
 	font-size: 1.5rem;
+	grid-area: sous-texte;
 }
 
 .footer {
@@ -397,5 +457,55 @@ p {
 .page404 {
 	font-size: 4rem;
 	text-align: center;
-	font-family: sans-serif;
+	font-family: 'Dosis', sans-serif;
+}
+
+.actus {
+	background-color: #ececec;
+	padding-top: 2rem;
+}
+
+.actus-type {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+	"image image image image"
+	"titreactus titreactus titreactus titreactus"
+	"descri1 descri1 descri1 descri1"
+	"bouton bouton bouton bouton";
+	grid-gap: 2rem;
+	text-align: center;
+	padding: 2% 5%;
+	background-color: white;
+	margin-bottom: 5rem;
+	margin: 5rem 2rem;
+}
+
+.flexactus {
+	display: flex;
+	justify-content: center;
+	margin: 0% 18%;
+	width: 90rem;
+}
+
+.imgactus {
+	grid-area: image;
+	width: 100%;	
+}
+
+.titredesactus {
+	grid-area: titreactus;
+}
+
+.descriptionactus {
+	grid-area: descri1;
+}
+
+.bouton-actus {
+	grid-area: bouton;
+	text-decoration: none;
+	border-radius: 4rem;
+	padding: 15% 0%;
+	border: grey solid 0.2rem;
 }

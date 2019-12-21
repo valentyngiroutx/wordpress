@@ -133,17 +133,24 @@ if ( have_posts() ) {
 
 	<div class="videos">
 		<p class="titre-section"><?php the_field('titre-videos')?></p>
-		<div class="videos-grille">
+		<div class="imgvid1">
 		<?php
 			$videos = get_field("repeteur-images-videos");
 			foreach ($videos as $video) {
 				echo "<div class='interieurgridvideos'>";
-				echo "<div class='video1'><img class='imgvideos1' src=".$video['image1-videos']['url'].">";
+				
+				echo "<div class='video1'>
+					<img class='imgvideos1' src=".$video['image1-videos']['url'].">";
 				echo "<p class='titre-videos '>".$video['titre-surimages-videos1']."</p>";
-				echo "<p class='text-videos'>".$video['description-surimages1']."</p></div>";
-				echo "<div class='video2'><img class='imgvideos2' src=".$video['image2-videos']['url'].">";
+				echo "<p class='text-videos'>".$video['description-surimages1']."</p>
+				</div>";
+				
+				echo "<div class='video2'>
+					<img class='imgvideos2' src=".$video['image2-videos']['url'].">";
 				echo "<p class='titre-videos'>".$video['titre-surimages-videos2']."</p>";
-				echo "<p class='text-videos'>".$video['description-surimages2']."</p></div>";
+				echo "<p class='text-videos'>".$video['description-surimages2']."</p>
+				</div>";
+				
 				echo "</div>";
 			}
 		?>
@@ -181,8 +188,26 @@ if ( have_posts() ) {
 			?>
 	</div>
 
-</section>
-	
 </div>
+</section>
+
+<section class="section-7">
+<div class="actus">
+		<p class="titre-section"><?php the_field('titre-actus')?></p>
+		<div class="flexactus">
+		<?php
+			$actus = get_field("repeteur-actus");
+			foreach ($actus as $actu) {
+				echo "<div class='actus-type'>";
+				echo "<img class='imgactus' src=".$actu['images-actus'].">";
+				echo "<p class='titredesactus'>".$actu['titredes-actus']."</p>";
+				echo "<p class='descriptionactus'>".$actu['description-actus']."</p>";
+				echo "<a href='#' class='bouton-actus'>".$actu['bouton-actus']."</a>";
+				echo "</div>";
+			}
+		?>
+	</div>
+</div>
+</section>
 
 <?php get_footer(); ?>
